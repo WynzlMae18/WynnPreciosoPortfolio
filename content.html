@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Wynn Princess M. Precioso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content.css">
+</head>
+<body>
+    <!-- Second Page -->
+    <div class="content-wrapper vh-100 d-flex justify-content-center align-items-center">
+        <div class="d-flex align-items-center">
+            <div class="left-picture rounded-circle"></div>
+            <div class="ml-4">
+                <h2>I am Wynn Princess M. Precioso</h2>
+                <h3>Are you curious about me? Well, click below to know more.</h3>
+                <div class="mt-3">
+                    <!-- Buttons with specific text and image paths for each info -->
+                    <button class="info-button m-2" onclick="showInfo('I was born from November 20, 2006', ['img/birthday1.jpg', 'img/birthday.png'])">Birthday</button>
+                    <button class="info-button m-2" onclick="showInfo('My family calls me Bebble from Barbie and the Fairytopia. My friends call me Wynn or Princess', ['img/nickname1.png', 'img/nickname2.jpg'])">Nickname</button>
+                    <button class="info-button m-2" onclick="showInfo('My father is Winston, my mother is May Giselle, and my elder sister is Wynzl Mae.', ['img/family1.jpg', 'img/family2.jpg'])">Family</button>
+                    <button class="info-button m-2" onclick="showInfo('I have three dogs (Lily, Miyeon, Star) and two hamsters (Mochi, Mocha)', ['img/pet1.jpg', 'img/pet2.jpg', 'img/pet3.jpg', 'img/pet4.jpg', 'img/pet5.jpg'])">Pets</button>
+                    <button class="info-button m-2" onclick="showInfo('My zodiac sign is Scorpio', ['img/zodiac.png'])">Zodiac Sign</button>
+                    <button class="info-button m-2" onclick="showInfo('I joined a modeling workshop in Star Builders Management CDO, and I also play volleyball.', ['img/hobbie.jpg'])">Hobbies</button>
+                    <button class="info-button m-2" onclick="showInfo('A Grade 12 Senior High Student at Xavier University Senior High School.', ['img/education.png', 'img/education1.png'])">Education</button>
+                    <button class="info-button m-2" onclick="showInfo('I dream of becoming a Soldier in the Medical Department.', ['img/dream_job1.png', 'img/dream_job2.jpg'])">Dream Job</button>
+                </div>
+                <div id="infoBox" class="mt-4 p-3 border rounded"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(infoText, images) {
+            const infoBox = document.getElementById('infoBox');
+            infoBox.innerHTML = ''; // Clear previous content
+
+            // Add the text
+            const textParagraph = document.createElement('p');
+            textParagraph.innerText = infoText;
+            infoBox.appendChild(textParagraph);
+
+            // Add the images if there are any
+            if (images.length > 0) {
+                images.forEach(imageSrc => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imageSrc;
+                    imgElement.alt = 'Related information image';
+                    imgElement.classList.add('info-image'); // CSS class for styling
+                    infoBox.appendChild(imgElement);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

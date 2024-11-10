@@ -1,0 +1,132 @@
+/* content.css */
+
+body, .content-wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #343a40;
+    background: url('intro_background.jpg') no-repeat center center fixed; /* Replace with your actual image path */
+    background-size: cover;
+}
+
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+    z-index: 1;
+}
+
+.content-wrapper * {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Left picture styling */
+.left-picture {
+    width: 200px;
+    height: 200px;
+    background-image: url('img/profile_pic1.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+h2, h3 {
+    color: #ffffff;
+}
+
+#infoBox {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1b2021;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-image {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.info-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.info-button:hover {
+    background-color: #c49b2a;
+    transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .left-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    #infoBox {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .info-image {
+        width: 120px;
+    }
+
+    .info-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    #infoBox {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .info-image {
+        width: 100px;
+    }
+
+    .info-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}

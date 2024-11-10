@@ -1,0 +1,94 @@
+/* index.css */
+
+/* Background styling */
+body, .content-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('intro_background.jpg') no-repeat center center fixed; /* Replace with your actual image path */
+    background-size: cover;
+    position: relative;
+    color: #f1f1f1;
+}
+
+.content-container::before {
+    content: '';
+    position: absolute;
+    top: 135px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); /* Adding an overlay for text readability */
+    height: 400px;
+    width:390px;
+}
+
+.content-container * {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Profile picture styling */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background-image: url('img/nickname2.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+/* Button styling */
+.btn-custom {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #ffc013;
+    color: #180505;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #9d1a1e;
+    color: #ffffff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-custom {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-custom {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
